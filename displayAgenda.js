@@ -1,7 +1,6 @@
 import { users_data } from "./data.js";
 const agendaEl = document.querySelector("#user-agenda-container"); // does not exist yet ==> nadika in charge
 
-
 export function displayAgendaForSelectedUser(e) {
   const userText = e.target.value;
   const user = users_data.find((user) => user.name === userText);
