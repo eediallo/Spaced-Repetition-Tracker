@@ -14,4 +14,12 @@ describe("users_data", () => {
 
     expect(currentInput).toBe(targetInput);
   });
+
+  test("Each user should have an id", () => {
+    users_data.forEach((user) => {
+      expect(user).toHaveProperty("id");
+    });
+  });
 });
+
+
