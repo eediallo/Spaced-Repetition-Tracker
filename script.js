@@ -1,3 +1,7 @@
 import { renderOptions } from "./renderOptions.js";
 
-window.onload = renderOptions;
+function main() {
+  renderOptions();
+}
+
+window.onload = main;
