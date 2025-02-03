@@ -26,4 +26,10 @@ describe("users_data", () => {
       expect(user).toHaveProperty("name");
     });
   });
+
+  test("Each user should have a unique id", () => {
+    const ids = users_data.map((user) => user.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
 });
