@@ -1,4 +1,4 @@
-import { getUserIds } from "./storage.js";
+import { getUserIds } from "../storage.js";
 
 describe("getUserIds", () => {
   test("Return value should be an array", () => {

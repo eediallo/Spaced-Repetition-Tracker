@@ -1,4 +1,4 @@
-import { users_data } from "./data.js";
+import { users_data } from "../data.js";
 
 describe("users_data", () => {
   test("Should not be empty", () => {
