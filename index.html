@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type="module" src="script.js" defer></script>
-  </head>
-  <body>
-    <label for="select-users">Select the user:</label>
-    <select name="users" id="select-users">
-    </select>
-  </body>
+
+<head>
+  <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+  <label for="select-users">Select the user:</label>
+  <select name="users" id="select-users"></select>
+
+  <div id="user-agenda-container"></div>
+
+  <h3>Add new topic:</h3>
+  <form action="#" id="form-add-topic">
+    <label for="form-topic">Topic</label>
+    <input type="text" id="form-topic" name="form-topic" required />
+    <label for="form-date">Date</label>
+    <input type="date" name="form-date" id="form-date" required />
+    <button type="submit" id="submit-btn">Add topic</button>
+  </form>
+</body>
+
 </html>

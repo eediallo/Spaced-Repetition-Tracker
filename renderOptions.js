@@ -1,4 +1,4 @@
-const selectEl = document.querySelector("#select-users");
+export const selectEl = document.querySelector("#select-users");
 import { users_data } from "./data.js";
 import { createOption } from "./option.js";
 
