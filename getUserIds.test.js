@@ -1,6 +1,10 @@
 import { getUserIds } from "./storage.js";
 
 describe("getUserIds", () => {
+  test("Return value should be an array", () => {
+    expect(Array.isArray(getUserIds())).toBe(true);
+  });
+
   test("Should not be empty", () => {
     expect(getUserIds().length > 0).toBe(true);
   });
