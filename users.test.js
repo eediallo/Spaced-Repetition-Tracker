@@ -20,6 +20,10 @@ describe("users_data", () => {
       expect(user).toHaveProperty("id");
     });
   });
+
+  test("Each user should have a name", () => {
+    users_data.forEach((user) => {
+      expect(user).toHaveProperty("name");
+    });
+  });
 });
-
-
