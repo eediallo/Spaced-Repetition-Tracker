@@ -8,4 +8,10 @@ describe("getUserIds", () => {
   test("Should have exactly 5 ids", () => {
     expect(getUserIds().length === 5).toBe(true);
   });
+
+  test("Ids should be of type string", () => {
+    getUserIds().forEach((id) => {
+      expect(typeof id === "string").toBe(true);
+    });
+  });
 });
