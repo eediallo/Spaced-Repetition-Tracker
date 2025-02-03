@@ -59,14 +59,8 @@ export const users_data = [
     name: "User 5",
     id: 5,
     agenda: {
-      title: "Arrays in JS",
-      dates: [
-        " 26th July 2025",
-        " 19th August 2025",
-        " 19th October 2025",
-        " 19th January 2026",
-        " 19th July 2026",
-      ],
+      title: "",
+      dates: [],
     },
   },
 ];
