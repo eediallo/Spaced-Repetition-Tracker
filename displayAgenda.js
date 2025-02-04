@@ -14,7 +14,7 @@ export function displayAgendaForSelectedUser(e) {
     agendaEl.appendChild(dateEl);
   } else {
     for (const date of dates) {
-      const dateEl = document.createElement("div");
+      const dateEl = document.createElement("p");
       dateEl.textContent = `${title}, ${date}`;
       agendaEl.appendChild(dateEl);
     }
