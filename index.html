@@ -11,7 +11,9 @@
 <body>
   <h1>Spaced Repetition Tracker - make learning easier!</h1>
   <label for="select-users">Select the user:</label>
-  <select name="users" id="select-users"></select>
+  <select name="users" id="select-users" required>
+    <option value="" disabled selected>Select a user</option>
+  </select>
 
   <div id="user-agenda-container">
     <h2>Agenda: Task Reviews</h2>
