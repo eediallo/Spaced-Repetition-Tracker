@@ -1,4 +1,4 @@
-import { formatDate } from "../calculateDate.js"; I
+import { formatDate } from "../calculateDate.js";
 
 describe("formatDate function", () => {
     test("Should format the date correctly", () => {
