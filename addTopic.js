@@ -24,6 +24,16 @@ export function addNewTopic() {
 
   if (user) {
     const existingData = getData(user.id) || user;
+
+    // Check if the topic already exists
+    const topicExists = existingData.agenda.some(
+      (topic) => topic.title === topicName
+    );
+    if (topicExists) {
+      alert("This topic already exists for the selected user.");
+      return;
+    }
+
     existingData.agenda.push(newTopic);
     user = existingData;
     addData(user.id, user);
