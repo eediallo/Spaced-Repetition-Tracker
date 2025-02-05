@@ -1,7 +1,7 @@
-import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
-import { calculateDates } from "./dates/calculateDate.js";
-import { users_data } from "./data/data.js";
-import { addData, getData } from "./data/storage.js";
+import { displayAgendaForSelectedUser } from "./displayAgenda.js";
+import { calculateDates } from "../dates/calculateDate.js";
+import { users_data } from "../data/data.js";
+import { addData, getData } from "../data/storage.js";
 
 const userSelectEl = document.getElementById("select-users");
 
