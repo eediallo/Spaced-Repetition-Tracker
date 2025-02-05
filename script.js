@@ -1,5 +1,5 @@
 import { renderOptions } from "./renderOptions.js";
-import { setDefaultDate } from "./defaultDate.js";
+import { setDefaultDate } from "./dates/defaultDate.js";
 const selectEl = document.querySelector("#select-users");
 const newTopicForm = document.querySelector("#form-add-topic");
 import { addNewTopic } from "./addTopic.js";
