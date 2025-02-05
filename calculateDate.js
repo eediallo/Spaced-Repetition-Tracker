@@ -12,7 +12,13 @@ export function formatDate(date) {
 }
 
 export function calculateDates(defaultDate) {
-  const todayDate = new Date(defaultDate);
+  let todayDate = new Date(defaultDate);
+  const currentDate = new Date();
+
+  // If the selected date is in the past, set it to today's date
+  if (todayDate < currentDate) {
+    todayDate = currentDate;
+  }
 
   const weekLater = new Date(todayDate);
   const monthLater = new Date(todayDate);
