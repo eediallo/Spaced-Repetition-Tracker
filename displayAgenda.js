@@ -2,7 +2,8 @@ import { getUserIds, getData } from "./storage.js";
 import { selectEl } from "./renderOptions.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 
-export function displayAgendaForSelectedUser() {
+export function displayAgendaForSelectedUser(e) {
+  e.preventDefault();
   const userText = selectEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
