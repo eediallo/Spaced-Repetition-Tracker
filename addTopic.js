@@ -1,5 +1,5 @@
 import { displayAgendaForSelectedUser } from "./displayAgenda.js";
-import { calculateDates } from "./calculateDate.js";
+import { calculateDates } from "./dates/calculateDate.js";
 import { users_data } from "./data.js";
 import { addData, getData } from "./storage.js";
 
