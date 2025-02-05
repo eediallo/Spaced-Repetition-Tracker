@@ -7,7 +7,9 @@ const userSelectEl = document.getElementById("select-users");
 
 export function addNewTopic() {
   const selectedUserName = userSelectEl.value;
-  const topicName = document.getElementById("form-topic").value;
+
+  const topicEl = document.getElementById("form-topic");
+  const topicName = topicEl.value;
   const startDate = document.getElementById("form-date").value;
 
   if (!selectedUserName || !topicName || !startDate) {
@@ -40,6 +42,5 @@ export function addNewTopic() {
   }
   displayAgendaForSelectedUser();
 
-  // Clear input fields after submission
-  document.getElementById("form-topic").value = "";
+  topicEl.value = "";
 }
