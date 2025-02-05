@@ -2,6 +2,7 @@ import { getUserIds, getData } from "../data/storage.js";
 import { selectEl } from "../dropDownMenu/renderOptions.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
+import { createAgendaDateElements } from "./agendDates.js";
 
 export function displayAgendaForSelectedUser() {
   const userText = selectEl.value.toLowerCase();

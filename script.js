@@ -2,7 +2,7 @@ import { renderOptions } from "./dropDownMenu/renderOptions.js";
 import { setDefaultDate } from "./dates/defaultDate.js";
 const selectEl = document.querySelector("#select-users");
 const newTopicForm = document.querySelector("#form-add-topic");
-import { addNewTopic } from "./addTopic.js";
+import { addNewTopic } from "./agenda/addTopic.js";
 import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
 
 function main() {
