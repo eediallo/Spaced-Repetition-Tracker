@@ -3,7 +3,7 @@ import { setDefaultDate } from "./defaultDate.js";
 const selectEl = document.querySelector("#select-users");
 const newTopicForm = document.querySelector("#form-add-topic");
 import { addNewTopic } from "./addTopic.js";
-import { displayAgendaForSelectedUser } from "./displayAgenda.js";
+import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
 
 function main() {
   renderOptions();
