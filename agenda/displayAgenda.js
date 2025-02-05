@@ -1,5 +1,5 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { selectEl } from "../renderOptions.js";
+import { selectEl } from "../dropDownMenu/renderOptions.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
 

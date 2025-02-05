@@ -1,5 +1,5 @@
 export const selectEl = document.querySelector("#select-users");
-import { users_data } from "./data/data.js";
+import { users_data } from "../data/data.js";
 import { createOption } from "./option.js";
 
 export function renderOptions() {

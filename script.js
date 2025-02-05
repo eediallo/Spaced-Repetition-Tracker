@@ -1,4 +1,4 @@
-import { renderOptions } from "./renderOptions.js";
+import { renderOptions } from "./dropDownMenu/renderOptions.js";
 import { setDefaultDate } from "./dates/defaultDate.js";
 const selectEl = document.querySelector("#select-users");
 const newTopicForm = document.querySelector("#form-add-topic");
