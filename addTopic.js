@@ -2,10 +2,11 @@ import { displayAgendaForSelectedUser } from "./displayAgenda.js";
 import { calculateDates } from "./calculateDate.js";
 import { users_data } from "./data.js";
 import { addData, getData } from "./storage.js";
-const form = document.querySelector("form");
+
+const userSelectEl = document.getElementById("select-users");
 
 export function addNewTopic() {
-  const selectedUserName = document.getElementById("select-users").value;
+  const selectedUserName = userSelectEl.value;
   const topicName = document.getElementById("form-topic").value;
   const startDate = document.getElementById("form-date").value;
 
@@ -19,12 +20,16 @@ export function addNewTopic() {
     dates: calculateDates(startDate),
   };
 
-  const user = users_data.find((user) => user.name === selectedUserName) || [];
-  user.agenda.push(newTopic);
-  addData(user.id, user);
+  let user = users_data.find((user) => user.name === selectedUserName);
 
-  //add user data to local storage
+  if (user) {
+    const existingData = getData(user.id) || user;
+    existingData.agenda.push(newTopic);
+    user = existingData;
+    addData(user.id, user);
+  }
+  displayAgendaForSelectedUser();
 
-  ///displayAgendaForSelectedUser();
-  form.reset();
+  // Clear input fields after submission
+  document.getElementById("form-topic").value = "";
 }
