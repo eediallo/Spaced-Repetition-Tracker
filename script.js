@@ -12,8 +12,14 @@ function main() {
 }
 
 function eventHandlers() {
-  selectEl.addEventListener("change", displayAgendaForSelectedUser);
-  newTopicForm.addEventListener("submit", addNewTopic);
+  selectEl.addEventListener("change", (e) => {
+    e.preventDefault();
+    displayAgendaForSelectedUser();
+  });
+  newTopicForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addNewTopic();
+  });
 }
 
 window.onload = main;
