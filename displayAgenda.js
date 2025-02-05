@@ -11,6 +11,9 @@ export function displayAgendaForSelectedUser() {
     const userData = getData(id);
     if (userData && userData.name && userData.name.toLowerCase() === userText) {
       userHasAgenda = true;
+      const titleEl = document.createElement("h3");
+      titleEl.textContent = `Agenda for ${userData.name}`;
+      agendaEl.appendChild(titleEl);
       userData.agenda.forEach(({ title, dates }) => {
         dates.forEach((date) => {
           const dateEl = document.createElement("p");
