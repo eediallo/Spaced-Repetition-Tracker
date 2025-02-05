@@ -1,8 +1,7 @@
-import { getUserIds, getData } from "../storage.js";
+import { getUserIds, getData } from "../data/storage.js";
 import { selectEl } from "../renderOptions.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
-
 
 export function displayAgendaForSelectedUser() {
   const userText = selectEl.value.toLowerCase();
