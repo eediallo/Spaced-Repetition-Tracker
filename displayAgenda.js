@@ -1,35 +1,30 @@
-import { displayAgendaForSelectedUser } from "./displayAgenda.js";
-import { calculateDates } from "./calculateDate.js";
-import { users_data } from "./data.js";
-import { addData, getData } from "./storage.js";
+import { getUserIds, getData } from "./storage.js";
+import { selectEl } from "./renderOptions.js";
+const agendaEl = document.querySelector("#user-agenda-container");
 
-const userSelectEl = document.getElementById("select-users");
-
-export function addNewTopic() {
-  const selectedUserName = userSelectEl.value;
-  const topicName = document.getElementById("form-topic").value;
-  const startDate = document.getElementById("form-date").value;
-
-  if (!selectedUserName || !topicName || !startDate) {
-    alert("Please fill in all fields.");
-    return;
+export function displayAgendaForSelectedUser() {
+  const userText = selectEl.value.toLowerCase();
+  const userIds = getUserIds();
+  let userHasAgenda = false;
+  agendaEl.innerHTML = ""; // Clear previous content before adding new elements
+  for (const id of userIds) {
+    const userData = getData(id);
+    if (userData && userData.name && userData.name.toLowerCase() === userText) {
+      userHasAgenda = true;
+      if (!Array.isArray(userData.agenda) || userData.agenda.length === 0) {
+        agendaEl.textContent = `There is no agenda for ${userData.name}`;
+        return;
+      }
+      userData.agenda.forEach(({ title, dates }) => {
+        dates.forEach((date) => {
+          const dateEl = document.createElement("p");
+          dateEl.textContent = `${title}, ${date}`;
+          agendaEl.appendChild(dateEl);
+        });
+      });
+    }
   }
-
-  const newTopic = {
-    title: topicName,
-    dates: calculateDates(startDate),
-  };
-
-  let user = users_data.find((user) => user.name === selectedUserName);
-
-  if (user) {
-    const existingData = getData(user.id) || user;
-    existingData.agenda.push(newTopic);
-    user = existingData;
-    addData(user.id, user);
+  if (!userHasAgenda) {
+    agendaEl.textContent = "No agenda found for this User";
   }
-  displayAgendaForSelectedUser();
-
-  // Clear input fields after submission
-  document.getElementById("form-topic").value = "";
 }
