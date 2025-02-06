@@ -13,7 +13,7 @@ The Spaced Repetition Tracker is a website that helps you learn better by using 
 3. **Open index.html in your browser** <br>Ensure the project is served over HTTP for the module system to work.
 
 ## Running tests
-### Make sure you have **Node.js** and **npm** installed before running the tests.
+#### Make sure you have **Node.js** and **npm** installed before running the tests.
 1. **Install dependencies** <br>npm install
 2. **Run Unit Tests:** <br>npm test <br>This will run the tests using Jest, the testing framework used in this project. 
 3. **Check the Test Results:** <br>The test results will be displayed in the terminal. If the tests pass, you'll see a message indicating that all tests have passed. If any test fails, you will get an error message showing where the issue is.
@@ -24,3 +24,5 @@ The Spaced Repetition Tracker is a website that helps you learn better by using 
 3. Add a new topic with a start date.
 4. The app will calculate and display review dates based on spaced repetition intervals.
 
+## Contributions 
+<br>Contributions are welcome. If you find any bugs or want to improve the project, feel free to fork the repo, make your changes, and submit a pull request.
