@@ -6,3 +6,12 @@ The Spaced Repetition Tracker is a website that helps you learn better by using 
 - **HTML**: Used for the structure of the website.
 - **JavaScript**: Used for functionality, including date calculations, user interaction, and data storage.
 - **localStorage**: Used to store the user data locally in the browser.
+
+## Usage
+1. **Clone the repository**
+   git clone https://github.com/your-username/spaced-repetition-tracker.git
+
+2. **Navigate into the project folder (if needed)**
+    cd spaced-repetition-tracker
+3. **Open index.html in your browser**
+    Ensure the project is served over HTTP for the module system to work.
