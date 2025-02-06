@@ -2,51 +2,26 @@ export const USERS = [
   {
     name: "Elhadj",
     id: 1,
-    agenda: [
-      {
-        title: "",
-        dates: [],
-      },
-    ],
+    agenda: [],
   },
   {
     name: "Nadika",
     id: 2,
-    agenda: [
-      {
-        title: "",
-        dates: [],
-      },
-    ],
+    agenda: [],
   },
   {
     name: "Anna",
     id: 3,
-    agenda: [
-      {
-        title: "",
-        dates: [],
-      },
-    ],
+    agenda: [],
   },
   {
     name: "Daniel",
     id: 4,
-    agenda: [
-      {
-        title: "",
-        dates: [],
-      },
-    ],
+    agenda: [],
   },
   {
     name: "Sally",
     id: 5,
-    agenda: [
-      {
-        title: "",
-        dates: [],
-      },
-    ],
+    agenda: [],
   },
 ];
