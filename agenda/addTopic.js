@@ -1,5 +1,5 @@
 import { displayAgendaForSelectedUser } from "./displayAgenda.js";
-import { calculateDates } from "../dates/calculateDates.js";
+import { getFutureDates } from "../dates/getFutureDates.js";
 import { USERS } from "../data/users.js";
 import { addData, getData } from "../data/storage.js";
 
@@ -19,7 +19,7 @@ export function addNewTopic() {
 
   const newTopic = {
     title: topicName,
-    dates: calculateDates(startDate),
+    dates: getFutureDates(startDate),
   };
 
   let user = USERS.find((user) => user.name === selectedUserName);
