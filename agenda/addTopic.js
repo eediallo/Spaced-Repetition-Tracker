@@ -1,9 +1,9 @@
 import { displayAgendaForSelectedUser } from "./displayAgenda.js";
-import { calculateDates } from "../dates/calculateDate.js";
-import { users_data } from "../data/data.js";
+import { calculateDates } from "../dates/calculateDates.js";
+import { USERS } from "../data/users.js";
 import { addData, getData } from "../data/storage.js";
 
-const userSelectEl = document.getElementById("select-users");
+const userSelectEl = document.querySelector("#select-users");
 
 export function addNewTopic() {
   const selectedUserName = userSelectEl.value;
@@ -22,7 +22,7 @@ export function addNewTopic() {
     dates: calculateDates(startDate),
   };
 
-  let user = users_data.find((user) => user.name === selectedUserName);
+  let user = USERS.find((user) => user.name === selectedUserName);
 
   if (user) {
     const existingData = getData(user.id) || user;

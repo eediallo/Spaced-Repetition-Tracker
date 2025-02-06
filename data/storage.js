@@ -29,10 +29,6 @@ export function getData(userId) {
  */
 export function addData(userId, data) {
   const key = `stored-data-user-${userId}`;
-
-  // const existingData = getData(userId) || [];
-  // const newData = existingData.concat(data);
-
   localStorage.setItem(key, JSON.stringify(data));
 }
 

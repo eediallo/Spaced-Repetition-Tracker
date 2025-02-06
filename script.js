@@ -1,25 +1,11 @@
-import { renderOptions } from "./dropDownMenu/renderOptions.js";
-import { setDefaultDate } from "./dates/defaultDate.js";
-const selectEl = document.querySelector("#select-users");
-const newTopicForm = document.querySelector("#form-add-topic");
-import { addNewTopic } from "./agenda/addTopic.js";
-import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
+import { createAndRenderUserList } from "./dropDownMenu/createUserList.js";
+import { setDefaultDate } from "./dates/setDefaultDate.js";
+import { eventHandlers } from "./eventHandlers.js";
 
 function main() {
-  renderOptions();
+  createAndRenderUserList();
   setDefaultDate();
   eventHandlers();
-}
-
-function eventHandlers() {
-  selectEl.addEventListener("change", (e) => {
-    e.preventDefault();
-    displayAgendaForSelectedUser();
-  });
-  newTopicForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    addNewTopic();
-  });
 }
 
 window.onload = main;

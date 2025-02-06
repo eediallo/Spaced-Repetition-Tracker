@@ -1,6 +1,6 @@
-export const users_data = [
+export const USERS = [
   {
-    name: "User 1",
+    name: "Elhadj",
     id: 1,
     agenda: [
       {
@@ -10,7 +10,7 @@ export const users_data = [
     ],
   },
   {
-    name: "User 2",
+    name: "Nadika",
     id: 2,
     agenda: [
       {
@@ -20,7 +20,7 @@ export const users_data = [
     ],
   },
   {
-    name: "User 3",
+    name: "Anna",
     id: 3,
     agenda: [
       {
@@ -30,7 +30,7 @@ export const users_data = [
     ],
   },
   {
-    name: "User 4",
+    name: "Daniel",
     id: 4,
     agenda: [
       {
@@ -40,7 +40,7 @@ export const users_data = [
     ],
   },
   {
-    name: "User 5",
+    name: "Sally",
     id: 5,
     agenda: [
       {

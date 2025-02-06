@@ -8,5 +8,5 @@ export function parseDate(dateStr) {
     }
   });
 
-  return new Date(`${month} ${day}, ${year}`); // Convert to Date object
+  return new Date(`${month} ${day}, ${year}`);
 }

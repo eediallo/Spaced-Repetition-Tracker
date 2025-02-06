@@ -1,5 +1,5 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { selectEl } from "../dropDownMenu/renderOptions.js";
+import { selectEl } from "../dropDownMenu/createUserList.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
 import { createAgendaDateElements } from "./agendDates.js";
@@ -20,6 +20,8 @@ export function displayAgendaForSelectedUser() {
     }
   }
   if (!userHasAgenda) {
-    agendaEl.textContent = "No agenda found for this User";
+    agendaEl.innerHTML = `No agenda found for <strong>${userText[0].toUpperCase()}${userText.slice(
+      1
+    )}</strong>`;
   }
 }
