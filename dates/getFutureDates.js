@@ -1,6 +1,6 @@
 import { formatDate } from "./formateDate.js";
 
-export function calculateDates(defaultDate) {
+export function getFutureDates(defaultDate) {
   const selectedDate = new Date(defaultDate);
   const currentDate = new Date(
     new Date().getFullYear(),
