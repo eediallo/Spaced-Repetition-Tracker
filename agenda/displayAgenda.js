@@ -1,11 +1,11 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { selectEl } from "../dropDownMenu/createUserList.js";
+import { userSelectEl } from "../queries.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
-import { createAgendaDateElements } from "./agendDates.js";
+import { createAgendaTopicList } from "./createAgendaList.js";
 
 export function displayAgendaForSelectedUser() {
-  const userText = selectEl.value.toLowerCase();
+  const userText = userSelectEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
   agendaEl.innerHTML = ""; // Clear previous content before adding new elements
@@ -15,8 +15,8 @@ export function displayAgendaForSelectedUser() {
       userHasAgenda = true;
       const titleEl = createAgendaTitleElement(userData);
       agendaEl.appendChild(titleEl);
-      const dateElements = createAgendaDateElements(userData.agenda);
-      dateElements.forEach((dateEl) => agendaEl.appendChild(dateEl));
+      const agendaList = createAgendaTopicList(userData.agenda);
+      agendaList.forEach((dateEl) => agendaEl.appendChild(dateEl));
     }
   }
   if (!userHasAgenda) {
