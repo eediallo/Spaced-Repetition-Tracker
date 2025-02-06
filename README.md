@@ -15,3 +15,9 @@ cd spaced-repetition-tracker
 3. **Open index.html in your browser**
 Ensure the project is served over HTTP for the module system to work.
 
+## Running tests
+1. **Install dependencies**
+    npm install
+2. **Run Unit Tests:**
+This will run the tests using Jest, the testing framework used in this project. 
+
