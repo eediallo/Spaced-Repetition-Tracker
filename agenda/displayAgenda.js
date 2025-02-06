@@ -1,11 +1,11 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { selectEl } from "../dropDownMenu/createUserList.js";
+import { userSelectEl } from "../queries.js";
 const agendaEl = document.querySelector("#user-agenda-container");
 import { createAgendaTitleElement } from "./createTitleEl.js";
 import { createAgendaTopicList } from "./createAgendaList.js";
 
 export function displayAgendaForSelectedUser() {
-  const userText = selectEl.value.toLowerCase();
+  const userText = userSelectEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
   agendaEl.innerHTML = ""; // Clear previous content before adding new elements
