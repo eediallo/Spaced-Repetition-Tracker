@@ -30,5 +30,9 @@ This project implements a spaced repetition learning technique, which involves r
 3. Add a new topic with a start date.
 4. The app will calculate and display review dates based on spaced repetition intervals.
 
+## Notes
+- This project focuses on logic implementation, so **no CSS** is used for styling.
+- The frontend is kept simple to emphasize functionality over design.
+
 ## Contributions 
 <br>Contributions are welcome. If you find any bugs or want to improve the project, feel free to fork the repo, make your changes, and submit a pull request.
