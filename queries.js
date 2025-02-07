@@ -6,4 +6,8 @@ const inputDate = document.querySelector("#form-date");
 
 const agendaEl = document.querySelector("#user-agenda-container");
 
-export { userSelectEl, topicEl, inputDate, agendaEl };
+const selectEl = document.querySelector("#select-users");
+
+const newTopicForm = document.querySelector("#form-add-topic");
+
+export { userSelectEl, topicEl, inputDate, agendaEl, selectEl, newTopicForm };

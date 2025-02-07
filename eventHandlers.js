@@ -1,5 +1,5 @@
-const selectEl = document.querySelector("#select-users");
-const newTopicForm = document.querySelector("#form-add-topic");
+import { selectEl } from "../queries.js";
+import { newTopicForm } from "../queries.js";
 import { addNewTopic } from "./agenda/addTopic.js";
 import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
 
