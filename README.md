@@ -11,6 +11,7 @@ This project implements a spaced repetition learning technique, which involves r
 - **HTML:** Used for the structure of the project.
 - **JavaScript:** Used for functionality, including date calculations, user interaction, and data storage.
 - **localStorage:** Used to store the user data locally in the browser.
+- **Jest:** Used for unit testing to ensure the core functionality works as expected.
 
 ## Set up & Installation
 1. **Clone the repository** <br>``` git clone https://github.com/eediallo/spaced-repetition-tracker.git ```
