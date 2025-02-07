@@ -3,9 +3,9 @@
 This project implements a spaced repetition learning technique, which involves reviewing topics over increasing time intervals (e.g., after one week, one month, three months, six months, and one year) from a selected date. The start date for the learning task can be chosen from the past, present, or future.<br>**The goal** is to help users track which topics need revision and when.
 
 ## Features
-- Topic Tracking: Users can add topics they want to revise.
-- Revision Schedule: The system calculates and displays the revision dates based on spaced repetition intervals.
-- Agenda Display: A simple frontend built with HTML and JavaScript shows an agenda of topics to revise on specific dates.
+- **Topic Tracking:** Users can add topics they want to revise.
+- **Revision Schedule:** The system calculates and displays the revision dates based on spaced repetition intervals.
+- **Agenda Display:** A simple frontend built with HTML and JavaScript shows an agenda of topics to revise on specific dates.
 
 ## Technologies
 - **HTML**: Used for the structure of the website.
