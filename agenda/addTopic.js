@@ -24,12 +24,13 @@ export function addNewTopic() {
   }
 
   const existingData = getData(user.id) || user;
+
   if (existingData.agenda.some((topic) => topic.title === topicName)) {
     alertMsg("This topic already exists for the selected user.");
+  } else {
+    existingData.agenda.push(newTopic);
+    addData(user.id, existingData);
   }
-
-  existingData.agenda.push(newTopic);
-  addData(user.id, existingData);
 
   displayAgendaForSelectedUser();
   topicEl.value = "";
