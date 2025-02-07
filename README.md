@@ -19,9 +19,9 @@ This project implements a spaced repetition learning technique, which involves r
 
 ## Running tests
 #### Make sure you have **Node.js** and **npm** installed before running the tests.
-1. **Install dependencies** <br>npm install
-2. **Run Unit Tests:** <br>npm test <br>This will run the tests using Jest, the testing framework used in this project. 
-3. **Check the Test Results:** <br>The test results will be displayed in the terminal. If the tests pass, you'll see a message indicating that all tests have passed. If any test fails, you will get an error message showing where the issue is.
+1. **Install dependencies:** <br>``` npm install ```
+2. **Run Unit Tests:** <br>``` npm test ```<br>This will run the tests using [Jest](https://jestjs.io).
+3. **Check the Test Results:** <br>The test results will be displayed in the terminal.
 
 ## Usage
 1. Open the application in your browser.
