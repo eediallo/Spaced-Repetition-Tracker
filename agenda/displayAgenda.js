@@ -1,14 +1,14 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { userSelectEl } from "../queries.js";
-const agendaEl = document.querySelector("#user-agenda-container");
+import { selectUserEl } from "../queries.js";
+import { agendaEl } from "../queries.js";
 import { createAgendaTitleElement } from "./createTitleEl.js";
 import { createAgendaTopicList } from "./createAgendaList.js";
 
 export function displayAgendaForSelectedUser() {
-  const userText = userSelectEl.value.toLowerCase();
+  const userText = selectUserEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
-  agendaEl.innerHTML = ""; // Clear previous content before adding new elements
+  agendaEl.innerHTML = "";
   for (const id of userIds) {
     const userData = getData(id);
     if (userData && userData.name && userData.name.toLowerCase() === userText) {
@@ -22,6 +22,6 @@ export function displayAgendaForSelectedUser() {
   if (!userHasAgenda) {
     agendaEl.innerHTML = `No agenda found for <strong>${userText[0].toUpperCase()}${userText.slice(
       1
-    )}</strong>`;
+    )}</strong>. Please add a new topic to revise!`;
   }
 }

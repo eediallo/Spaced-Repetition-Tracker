@@ -2,11 +2,11 @@ import { displayAgendaForSelectedUser } from "./displayAgenda.js";
 import { getFutureDates } from "../dates/getFutureDates.js";
 import { USERS } from "../data/users.js";
 import { addData, getData } from "../data/storage.js";
-import { userSelectEl, topicEl, inputDate } from "../queries.js";
+import { selectUserEl, topicEl, inputDate } from "../queries.js";
 import { alertMsg } from "./alertMsg.js";
 
 export function addNewTopic() {
-  const selectedUserName = userSelectEl.value;
+  const selectedUserName = selectUserEl.value;
   const topicName = topicEl.value;
   const startDate = inputDate.value;
   if (!selectedUserName || !topicName || !startDate) {
@@ -24,12 +24,13 @@ export function addNewTopic() {
   }
 
   const existingData = getData(user.id) || user;
+
   if (existingData.agenda.some((topic) => topic.title === topicName)) {
     alertMsg("This topic already exists for the selected user.");
+  } else {
+    existingData.agenda.push(newTopic);
+    addData(user.id, existingData);
   }
-
-  existingData.agenda.push(newTopic);
-  addData(user.id, existingData);
 
   displayAgendaForSelectedUser();
   topicEl.value = "";

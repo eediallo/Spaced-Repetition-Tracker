@@ -4,31 +4,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spaced Repetition Tracker project</title>
+  <title>Spaced Repetition Tracker</title>
   <meta name="description"
-    content="The Spaced Repetition website helps you learn more efficiently. Add a study schedule, set review dates for topics, and track your learning progress over time." />
-    <meta name="author" content="Elhadj Abdoul Diallo, Nadika Zavodovska, and Anna Fedyna." />
+    content="The Spaced Repetition Tracker helps learners study more effectively by creating study schedules, setting review dates, and tracking progress over time." />
+  <meta name="author" content="Elhadj Abdoul Diallo, Nadika Zavodovska, and Anna Fedyna." />
   <script type="module" src="script.js" defer></script>
 </head>
 
 <body>
-  <h1>Spaced Repetition Tracker</h1>
-  <label for="select-users">Select a user:</label>
-  <select name="users" id="select-users" required>
-    <option value="" disabled selected>Select a user</option>
-  </select><br>
+  <header>
+    <h1>Spaced Repetition Tracker</h1>
+  </header>
 
-  <h2>Add a new topic</h2>
-  <form action="#" id="form-add-topic">
-    <label for="form-topic">New topic: </label>
-    <input type="text" id="form-topic" name="form-topic" placeholder="Enter new topic" required /><br><br>
-    <label for="form-date">Select date: </label>
-    <input type="date" name="form-date" id="form-date" required /><br><br>
-    <button type="submit" id="submit-btn">Add topic</button><br><br>
-  </form>
+  <main>
+    <section>
+      <label for="select-users">Select a user:</label>
+      <select name="users" id="select-users" required>
+        <option value="" disabled selected>Select a user</option>
+      </select>
+    </section>
 
-  <div id="user-agenda-container">
-  </div>
+    <section>
+      <h2>Add a new topic</h2>
+      <form action="#" id="form-add-topic">
+        <label for="form-topic">Topic name: </label>
+        <input type="text" id="form-topic" name="form-topic" placeholder="Enter a new topic name" required /><br><br>
+        <label for="form-date">Select a date: </label>
+        <input type="date" name="form-date" id="form-date" required /><br><br>
+        <button type="submit" id="submit-btn">Add a topic</button><br><br>
+      </form>
+    </section>
+
+    <section id="user-agenda-container">
+    </section>
+  </main><br><br>
+
+  <footer>
+    <div>&copy; 2025 Spaced Repetition Tracker. All rights reserved.</div>
+    <div>
+      Check the code on <a href="https://github.com/eediallo/Spaced-Repetition-Tracker" target="_blank">GitHub</a>.
+    </div>
+  </footer>
 </body>
 
 </html>
