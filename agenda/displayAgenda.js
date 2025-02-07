@@ -1,6 +1,6 @@
 import { getUserIds, getData } from "../data/storage.js";
 import { userSelectEl } from "../queries.js";
-const agendaEl = document.querySelector("#user-agenda-container");
+import { agendaEl } from "../queries.js";
 import { createAgendaTitleElement } from "./createTitleEl.js";
 import { createAgendaTopicList } from "./createAgendaList.js";
 
