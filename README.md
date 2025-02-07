@@ -8,12 +8,12 @@ This project implements a spaced repetition learning technique, which involves r
 - **Agenda Display:** A simple frontend built with HTML and JavaScript shows an agenda of topics to revise on specific dates.
 
 ## Technologies
-- **HTML**: Used for the structure of the website.
-- **JavaScript**: Used for functionality, including date calculations, user interaction, and data storage.
-- **localStorage**: Used to store the user data locally in the browser.
+- **HTML:** Used for the structure of the project.
+- **JavaScript:** Used for functionality, including date calculations, user interaction, and data storage.
+- **localStorage:** Used to store the user data locally in the browser.
 
 ## Set up & Installation
-1. **Clone the repository** <br>git clone https://github.com/your-username/spaced-repetition-tracker.git
+1. **Clone the repository** <br>```git clone https://github.com/eediallo/spaced-repetition-tracker.git
 2. **Navigate into the project folder (if needed)** <br>cd spaced-repetition-tracker
 3. **Open index.html in your browser** <br>Ensure the project is served over HTTP for the module system to work.
 
