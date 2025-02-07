@@ -1,6 +1,6 @@
 # Spaced-Repetition-Tracker
 
-This project implements a spaced repetition learning technique, which involves reviewing topics over increasing time intervals (e.g., after one week, one month, three months, six months, and one year) from a selected date. The start date for the learning task can be chosen from the past, present, or future. The goal is to help users track which topics need revision and when.
+This project implements a spaced repetition learning technique, which involves reviewing topics over increasing time intervals (e.g., after one week, one month, three months, six months, and one year) from a selected date. The start date for the learning task can be chosen from the past, present, or future.<br>**The goal** is to help users track which topics need revision and when.
 
 ## Technologies
 - **HTML**: Used for the structure of the website.
