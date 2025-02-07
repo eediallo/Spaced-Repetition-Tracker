@@ -22,6 +22,6 @@ export function displayAgendaForSelectedUser() {
   if (!userHasAgenda) {
     agendaEl.innerHTML = `No agenda found for <strong>${userText[0].toUpperCase()}${userText.slice(
       1
-    )}</strong>`;
+    )}</strong>. Please add a new topic to revise!`;
   }
 }
