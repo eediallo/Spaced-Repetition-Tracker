@@ -1,11 +1,11 @@
 import { getUserIds, getData } from "../data/storage.js";
-import { userSelectEl } from "../queries.js";
+import { selectUserEl } from "../queries.js";
 import { agendaEl } from "../queries.js";
 import { createAgendaTitleElement } from "./createTitleEl.js";
 import { createAgendaTopicList } from "./createAgendaList.js";
 
 export function displayAgendaForSelectedUser() {
-  const userText = userSelectEl.value.toLowerCase();
+  const userText = selectUserEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
   agendaEl.innerHTML = "";

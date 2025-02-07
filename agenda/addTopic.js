@@ -2,11 +2,11 @@ import { displayAgendaForSelectedUser } from "./displayAgenda.js";
 import { getFutureDates } from "../dates/getFutureDates.js";
 import { USERS } from "../data/users.js";
 import { addData, getData } from "../data/storage.js";
-import { userSelectEl, topicEl, inputDate } from "../queries.js";
+import { selectUserEl, topicEl, inputDate } from "../queries.js";
 import { alertMsg } from "./alertMsg.js";
 
 export function addNewTopic() {
-  const selectedUserName = userSelectEl.value;
+  const selectedUserName = selectUserEl.value;
   const topicName = topicEl.value;
   const startDate = inputDate.value;
   if (!selectedUserName || !topicName || !startDate) {

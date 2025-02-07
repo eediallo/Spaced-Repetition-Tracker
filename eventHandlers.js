@@ -1,10 +1,10 @@
-import { selectEl } from "../queries.js";
+import { selectUserEl } from "../queries.js";
 import { newTopicForm } from "../queries.js";
 import { addNewTopic } from "./agenda/addTopic.js";
 import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
 
 export function eventHandlers() {
-  selectEl.addEventListener("change", (e) => {    
+  selectUserEl.addEventListener("change", (e) => {    
     displayAgendaForSelectedUser();
   });
   newTopicForm.addEventListener("submit", (e) => {
