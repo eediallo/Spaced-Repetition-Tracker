@@ -4,8 +4,7 @@ import { addNewTopic } from "./agenda/addTopic.js";
 import { displayAgendaForSelectedUser } from "./agenda/displayAgenda.js";
 
 export function eventHandlers() {
-  selectEl.addEventListener("change", (e) => {
-    e.preventDefault();
+  selectEl.addEventListener("change", (e) => {    
     displayAgendaForSelectedUser();
   });
   newTopicForm.addEventListener("submit", (e) => {

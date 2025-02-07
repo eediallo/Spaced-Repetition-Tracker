@@ -8,7 +8,7 @@ export function displayAgendaForSelectedUser() {
   const userText = userSelectEl.value.toLowerCase();
   const userIds = getUserIds();
   let userHasAgenda = false;
-  agendaEl.innerHTML = ""; // Clear previous content before adding new elements
+  agendaEl.innerHTML = "";
   for (const id of userIds) {
     const userData = getData(id);
     if (userData && userData.name && userData.name.toLowerCase() === userText) {
