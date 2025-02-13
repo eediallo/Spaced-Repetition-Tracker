@@ -19,7 +19,7 @@ This project implements a spaced repetition learning technique, which involves r
 3. **Open index.html in your browser** <br>Ensure the project is served over HTTP for the module system to work. [Learn to serve over HTTP.](https://www.npmjs.com/package/http-server)
 
 ## Running tests
-#### Make sure you have **Node.js** and **npm** installed before running the tests.
+#### Make sure you have Node.js installed before running the tests.
 1. **Install dependencies:** <br>``` npm install ```
 2. **Run Unit Tests:** <br>``` npm test ```<br>This will run the tests using [Jest](https://jestjs.io).
 3. **Check the Test Results:** <br>The test results will be displayed in the terminal.
